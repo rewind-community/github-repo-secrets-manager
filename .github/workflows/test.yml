@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Set up python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
@@ -25,10 +25,10 @@ jobs:
         run: pip install -r requirements-test.txt
 
       - name: Format
-        uses: psf/black@stable
+        uses: psf/black@35ea67920b7f6ac8e09be1c47278752b1e827f76 # stable
 
       - name: Test
-        run:  |
+        run: |
           pytest --junitxml=pytest.xml --cov=. test*.py > pytest-coverage.txt
 
       - name: Comment coverage
