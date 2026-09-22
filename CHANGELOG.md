@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [1.3.1]
+
+- Bump PyNaCl to ~=1.6.2 to remediate GHSA-mrfv-m5wm-5w6w (libsodium incomplete list of disallowed inputs)
+
 ## [1.3.0]
 
 - Add support for organization level secrets
